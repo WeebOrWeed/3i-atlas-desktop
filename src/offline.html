@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'" />
+    <title>3I Atlas - connection error</title>
+    <style>
+      body { background:#0b0f16; color:#e6ebf5; font:14px system-ui, sans-serif; display:flex; align-items:center; justify-content:center; height:100vh; margin:0; }
+      main { max-width:560px; padding:28px; border:1px solid #232a38; border-radius:12px; background:#111722; }
+      h1 { font-size:18px; margin:0 0 10px; }
+      p { color:#8893a8; line-height:1.5; }
+      code { color:#9fb0d0; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Atlas console could not be reached</h1>
+      <p>The desktop shell could not load the Atlas console. Check your network or the configured URL:</p>
+      <p><code id="url"></code></p>
+      <p id="reason" style="font-size:12px"></p>
+      <p>Use <strong>Atlas → Clear session</strong> if you are stuck on a stale session, then restart the app.</p>
+    </main>
+    <script>
+      const params = new URLSearchParams(location.search);
+      document.getElementById("url").textContent = params.get("url") || "unknown";
+      document.getElementById("reason").textContent = (params.get("code") || "") + " " + (params.get("reason") || "");
+    </script>
+  </body>
+</html>
