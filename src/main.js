@@ -86,6 +86,7 @@ function buildMenu() {
         submenu: [
           { label: "World state", click: () => mainWindow && mainWindow.loadURL(CONSOLE_URL + "#world") },
           { label: "Benchmarks", click: () => mainWindow && mainWindow.loadURL(CONSOLE_URL + "#benchmarks") },
+          { label: "Ask Atlas", click: () => mainWindow && mainWindow.loadURL(CONSOLE_URL + "#chat") },
           { label: "Datasets", click: () => mainWindow && mainWindow.loadURL(CONSOLE_URL + "#datasets") },
           { label: "Scenario lab", click: () => mainWindow && mainWindow.loadURL(CONSOLE_URL + "#scenario") },
           { label: "Account", click: () => mainWindow && mainWindow.loadURL(CONSOLE_URL + "#account") },
