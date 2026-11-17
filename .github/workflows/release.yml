@@ -31,7 +31,7 @@ jobs:
             - macOS: right-click the app → Open on first launch (Gatekeeper).
             - Windows: More info → Run anyway (SmartScreen).
             - No Apple Developer ID / Windows signing certificate yet.
-          prerelease: true
+          prerelease: false
           generate_release_notes: true
 
   build-mac:
@@ -48,7 +48,7 @@ jobs:
           node-version: "20"
       - run: npm install
       - name: Build macOS installers
-        run: npm run dist
+        run: npm run dist -- --publish never
       - name: List artifacts
         run: ls -la release
       - uses: actions/upload-artifact@v4
@@ -61,7 +61,7 @@ jobs:
         with:
           tag_name: ${{ github.ref_name }}
           files: release/*.dmg
-          prerelease: true
+          prerelease: false
 
   build-windows:
     name: Build Windows
@@ -77,7 +77,7 @@ jobs:
           node-version: "20"
       - run: npm install
       - name: Build Windows installer
-        run: npm run dist
+        run: npm run dist -- --publish never
       - name: List artifacts
         run: dir release
       - uses: actions/upload-artifact@v4
@@ -90,4 +90,4 @@ jobs:
         with:
           tag_name: ${{ github.ref_name }}
           files: release/*.exe
-          prerelease: true
+          prerelease: false
