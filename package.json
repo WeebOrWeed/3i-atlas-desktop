@@ -1,6 +1,6 @@
 {
   "name": "atlas-desktop-shell",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": true,
   "description": "Atlas desktop shell - cloud console/API client for the 3I Atlas platform",
   "main": "src/main.js",
