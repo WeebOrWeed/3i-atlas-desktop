@@ -84,11 +84,11 @@ function buildMenu() {
       {
         label: "Navigate",
         submenu: [
-          { label: "World state", click: () => mainWindow && mainWindow.loadURL(CONSOLE_URL + "#world") },
-          { label: "Benchmarks", click: () => mainWindow && mainWindow.loadURL(CONSOLE_URL + "#benchmarks") },
+          { label: "Overview", click: () => mainWindow && mainWindow.loadURL(CONSOLE_URL + "#overview") },
+          { label: "Forecasts", click: () => mainWindow && mainWindow.loadURL(CONSOLE_URL + "#forecasts") },
           { label: "Ask Atlas", click: () => mainWindow && mainWindow.loadURL(CONSOLE_URL + "#chat") },
-          { label: "Datasets", click: () => mainWindow && mainWindow.loadURL(CONSOLE_URL + "#datasets") },
-          { label: "Scenario lab", click: () => mainWindow && mainWindow.loadURL(CONSOLE_URL + "#scenario") },
+          { label: "Data library", click: () => mainWindow && mainWindow.loadURL(CONSOLE_URL + "#data") },
+          { label: "Research lab", click: () => mainWindow && mainWindow.loadURL(CONSOLE_URL + "#lab") },
           { label: "Account", click: () => mainWindow && mainWindow.loadURL(CONSOLE_URL + "#account") },
         ],
       },
